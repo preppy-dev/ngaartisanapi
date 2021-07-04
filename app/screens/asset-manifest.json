@@ -1,0 +1,40 @@
+{
+  "files": {
+    "main.css": "/static/css/main.76d050f1.chunk.css",
+    "main.js": "/static/js/main.646390e5.chunk.js",
+    "main.js.map": "/static/js/main.646390e5.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.2ee5c24c.js",
+    "runtime-main.js.map": "/static/js/runtime-main.2ee5c24c.js.map",
+    "static/css/2.4dbbbc75.chunk.css": "/static/css/2.4dbbbc75.chunk.css",
+    "static/js/2.62dda28c.chunk.js": "/static/js/2.62dda28c.chunk.js",
+    "static/js/2.62dda28c.chunk.js.map": "/static/js/2.62dda28c.chunk.js.map",
+    "static/js/3.a2229ae2.chunk.js": "/static/js/3.a2229ae2.chunk.js",
+    "static/js/3.a2229ae2.chunk.js.map": "/static/js/3.a2229ae2.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.4dbbbc75.chunk.css.map": "/static/css/2.4dbbbc75.chunk.css.map",
+    "static/css/main.76d050f1.chunk.css.map": "/static/css/main.76d050f1.chunk.css.map",
+    "static/js/2.62dda28c.chunk.js.LICENSE.txt": "/static/js/2.62dda28c.chunk.js.LICENSE.txt",
+    "static/media/Image1.f003ffeb.png": "/static/media/Image1.f003ffeb.png",
+    "static/media/Image4.fa63f814.png": "/static/media/Image4.fa63f814.png",
+    "static/media/Image5.a604ee91.png": "/static/media/Image5.a604ee91.png",
+    "static/media/Image6.a75faaf5.png": "/static/media/Image6.a75faaf5.png",
+    "static/media/Image7.03fbe577.png": "/static/media/Image7.03fbe577.png",
+    "static/media/index.css": "/static/media/Montserrat-Regular.3cd78665.ttf",
+    "static/media/UploadIcon.svg": "/static/media/UploadIcon.469126df.svg",
+    "static/media/artisan.fddc984a.png": "/static/media/artisan.fddc984a.png",
+    "static/media/banner_home.a2ce7edd.png": "/static/media/banner_home.a2ce7edd.png",
+    "static/media/camion.1b357a08.svg": "/static/media/camion.1b357a08.svg",
+    "static/media/entreprise.58d413ce.png": "/static/media/entreprise.58d413ce.png",
+    "static/media/explainicon.80149e0e.png": "/static/media/explainicon.80149e0e.png",
+    "static/media/logincover.ada5e0ca.png": "/static/media/logincover.ada5e0ca.png",
+    "static/media/outils.a6f56cda.svg": "/static/media/outils.a6f56cda.svg",
+    "static/media/pouce.84466171.svg": "/static/media/pouce.84466171.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2ee5c24c.js",
+    "static/css/2.4dbbbc75.chunk.css",
+    "static/js/2.62dda28c.chunk.js",
+    "static/css/main.76d050f1.chunk.css",
+    "static/js/main.646390e5.chunk.js"
+  ]
+}
