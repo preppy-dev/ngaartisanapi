@@ -1,0 +1,81 @@
+[{
+  "_id": {
+    "$oid": "60d2ed14a092172e2a497fcb"
+  },
+  "name": "Installation",
+  "description": "Installation",
+  "types": [
+    {
+      "_id": {
+        "$oid": "60d31860056d3635933c6a11"
+      },
+      "name": "Prise",
+      "price": 0,
+      "description": "Prise",
+      "createdAt": {
+        "$date": "2021-06-23T11:17:52.127Z"
+      },
+      "updatedAt": {
+        "$date": "2021-06-23T11:17:52.127Z"
+      }
+    },
+    {
+      "_id": {
+        "$oid": "60d3194a056d3635933c6a17"
+      },
+      "name": "Interrupteur",
+      "price": 3000,
+      "description": "Interrupteur",
+      "createdAt": {
+        "$date": "2021-06-23T11:21:46.493Z"
+      },
+      "updatedAt": {
+        "$date": "2021-06-23T11:21:46.493Z"
+      }
+    }
+  ],
+  "createdAt": {
+    "$date": "2021-06-23T08:13:08.745Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-23T12:02:11.590Z"
+  },
+  "__v": 2,
+  "category": {
+    "$oid": "60d225155dcc081cdd50af05"
+  }
+},{
+  "_id": {
+    "$oid": "60d322e13cfdb441a774ee42"
+  },
+  "name": "Diagnostiquer le problème",
+  "description": "Diagnostiquer le problème",
+  "types": [],
+  "createdAt": {
+    "$date": "2021-06-23T12:02:41.718Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T06:44:07.614Z"
+  },
+  "__v": 0,
+  "category": {
+    "$oid": "60d225155dcc081cdd50af05"
+  }
+},{
+  "_id": {
+    "$oid": "60d57bdde86a9b9999c9ba6b"
+  },
+  "name": "Dépannage",
+  "description": "Dépannage",
+  "types": [],
+  "createdAt": {
+    "$date": "2021-06-25T06:46:53.202Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T06:47:09.195Z"
+  },
+  "__v": 0,
+  "category": {
+    "$oid": "60d225155dcc081cdd50af05"
+  }
+}]

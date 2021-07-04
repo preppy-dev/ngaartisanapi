@@ -1,0 +1,129 @@
+[{
+  "_id": {
+    "$oid": "60d225155dcc081cdd50af05"
+  },
+  "name": "Électricité",
+  "icon": "/uploads/electrique.png",
+  "image": "/uploads/entreprise.png",
+  "description": "Électricité",
+  "createdAt": {
+    "$date": "2021-06-22T17:59:49.233Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:18:39.618Z"
+  },
+  "__v": 0,
+  "link": "electricite"
+},{
+  "_id": {
+    "$oid": "60d2aaa5c5317a0f8394d73a"
+  },
+  "name": "Froid",
+  "icon": "/uploads/froid.png",
+  "image": "sample image",
+  "description": "Froid",
+  "createdAt": {
+    "$date": "2021-06-23T03:29:41.789Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:19:26.502Z"
+  },
+  "__v": 0,
+  "link": "froid"
+},{
+  "_id": {
+    "$oid": "60d2aadac5317a0f8394d745"
+  },
+  "name": "Plomberie et Cusine",
+  "icon": "/uploads/plomberie.png",
+  "image": "/uploads/plomberie.png",
+  "description": "Plomberie et Cusine",
+  "createdAt": {
+    "$date": "2021-06-23T03:30:34.455Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:19:48.850Z"
+  },
+  "__v": 0,
+  "link": "plomberie"
+},{
+  "_id": {
+    "$oid": "60d2aaf4c5317a0f8394d750"
+  },
+  "name": "Électroménager",
+  "icon": "/uploads/electromenage.png",
+  "image": "sample image",
+  "description": "Électroménager",
+  "createdAt": {
+    "$date": "2021-06-23T03:31:00.118Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:20:15.235Z"
+  },
+  "__v": 0,
+  "link": "electromenager"
+},{
+  "_id": {
+    "$oid": "60d2ab62c5317a0f8394d771"
+  },
+  "name": "Fixation d’objet",
+  "icon": "/uploads/fixation.png",
+  "image": "sample image",
+  "description": "Fixation d’objet",
+  "createdAt": {
+    "$date": "2021-06-23T03:32:50.187Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:20:34.366Z"
+  },
+  "__v": 0,
+  "link": "fixation"
+},{
+  "_id": {
+    "$oid": "60d2ab73c5317a0f8394d77c"
+  },
+  "name": "Montage et Demontage",
+  "icon": "/uploads/montage.png",
+  "image": "sample image",
+  "description": "Montage et Demontage",
+  "createdAt": {
+    "$date": "2021-06-23T03:33:07.425Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:20:52.203Z"
+  },
+  "__v": 0,
+  "link": "montage"
+},{
+  "_id": {
+    "$oid": "60d2b4b935b55c143af641e0"
+  },
+  "name": "Serrurerie",
+  "icon": "sample icon",
+  "image": "sample image",
+  "description": "Serrurerie",
+  "createdAt": {
+    "$date": "2021-06-23T04:12:41.838Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:21:21.255Z"
+  },
+  "__v": 0,
+  "link": "serrurerie"
+},{
+  "_id": {
+    "$oid": "60d2b50635b55c143af641ea"
+  },
+  "name": "Carrelage et Sol",
+  "icon": "sample icon",
+  "image": "sample image",
+  "description": "Carrelage et Sol",
+  "createdAt": {
+    "$date": "2021-06-23T04:13:58.912Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-25T23:21:58.701Z"
+  },
+  "__v": 0,
+  "link": "carrelage-sol"
+}]

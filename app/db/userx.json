@@ -1,0 +1,49 @@
+[{
+  "_id": {
+    "$oid": "60d1d07748ec3b57705e6562"
+  },
+  "artisan": {
+    "rating": 0,
+    "numReviews": 0
+  },
+  "isAdmin": true,
+  "isModerator": true,
+  "isArtisan": true,
+  "firstname": "Preppy",
+  "lastname": "Nino",
+  "email": "admin@example.com",
+  "profil": "",
+  "username": "",
+  "password": "$2a$08$bn5Rqkc2tcLBsfeMy7V6G.NIOuw5i7WHregMN0XyK.syjI8Fhxrqi",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-22T11:58:47.652Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-22T11:58:47.652Z"
+  }
+},{
+  "_id": {
+    "$oid": "60d1d07748ec3b57705e6563"
+  },
+  "artisan": {
+    "rating": 0,
+    "numReviews": 0
+  },
+  "isAdmin": false,
+  "isModerator": false,
+  "isArtisan": false,
+  "firstname": "John",
+  "lastname": "User",
+  "email": "user@example.com",
+  "profil": "",
+  "username": "",
+  "password": "$2a$08$vSZkchWAw0cJy2QOZzl3rOf3WnNvjpzrOHmvlog.0uKMHUBOwOQJ6",
+  "__v": 0,
+  "createdAt": {
+    "$date": "2021-06-22T11:58:47.669Z"
+  },
+  "updatedAt": {
+    "$date": "2021-06-22T11:58:47.669Z"
+  }
+}]

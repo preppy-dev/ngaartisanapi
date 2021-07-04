@@ -35,10 +35,10 @@ app.use('/api/orders', orderRouter);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-/* app.use(express.static(path.join(__dirname, './frontend/build')));
+app.use(express.static(path.join(__dirname, '/build')));
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, './frontend/build/index.html'))
-); */
+  res.sendFile(path.join(__dirname, '/build/index.html'))
+);
 
 
 app.listen(env.port).on('listening', () => {
