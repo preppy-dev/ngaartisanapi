@@ -3,10 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "yarn run clean && yarn run build-babel",
-    "start": "yarn run build && node ./build/index.js",
-    "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build . -s"
+    "start": "nodemon --watch . --exec babel-node -- server"
   },
   "license": "MIT",
   "dependencies": {

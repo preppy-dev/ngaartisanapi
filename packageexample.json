@@ -4,8 +4,10 @@
   "main": "index.js",
   "scripts": {
     "start": "nodemon --watch . --exec babel-node -- server",
+    "build": "yarn run clean && yarn run build-babel",
+    "start": "yarn run build && node ./build/index.js",
     "clean": "rm -rf build && mkdir build",
-    "build-babel": "babel -d ./build ./src -s"
+    "build-babel": "babel -d ./build . -s"
   },
   "license": "MIT",
   "dependencies": {
