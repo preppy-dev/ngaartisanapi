@@ -1,9 +1,8 @@
 {
-  "name": "backend",
+  "name": "ngaartisanapi",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "build": "cd ./frontend && npm install && run build",
     "start": "nodemon --watch . --exec babel-node -- server"
   },
   "license": "MIT",
