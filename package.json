@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --watch . --exec babel-node -- server"
+    "build": "npm run clean && npm run build-babel",
+"start": "npm run build && node ./build/index.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-babel": "babel -d ./build ./src -s"
   },
   "license": "MIT",
   "dependencies": {
