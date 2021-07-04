@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default {
-  database_url: process.env.DATABASE_URL,
+  database_url: process.env.MONGODB_URL || 'mongodb://localhost/artisan',
   test_database_url: process.env.TEST_DATABASE_URL,
   secret: process.env.SECRET,
   port: process.env.PORT || 5000,
