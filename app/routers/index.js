@@ -2,7 +2,7 @@ import express from 'express';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
+router.get('/api', (req, res) => {
   res.status(200).send({
     success: 'true',
     message: "Bienvenu a API de N'ga Artisan ",
