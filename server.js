@@ -35,9 +35,9 @@ app.use('/api/orders', orderRouter);
 
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
-app.use(express.static(path.join(__dirname, './app')));
+app.use(express.static(path.join(__dirname, './app/screens')));
 app.get('*', (req, res) =>
-  res.sendFile(path.join(__dirname, './app/index.html'))
+  res.sendFile(path.join(__dirname, './app/screens/index.html'))
 );
 
 
