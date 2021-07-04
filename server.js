@@ -24,7 +24,7 @@ mongoose.connect(env.database_url, {
   useCreateIndex: true,
 });
 
-/* app.use(index); */
+app.use(index);
 app.use('/api/uploads', uploadRouter);
 app.use('/api/users', userRouter);
 app.use('/api/category', categoryRouter);
