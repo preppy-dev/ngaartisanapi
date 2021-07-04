@@ -1,1 +1,1 @@
-web: node --experimental-modules ./server.js
+web: babel-node -- server
