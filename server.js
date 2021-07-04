@@ -41,5 +41,6 @@ app.get('*', (req, res) =>
 
 
 app.listen(env.port).on('listening', () => {
-  console.log(`🚀 are live on ${env.port}`);
+  console.log(` are live on ${env.port}`);
+  /* console.log(` are live on ${env.port}`); */
 });
