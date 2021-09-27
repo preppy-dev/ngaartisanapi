@@ -22,7 +22,10 @@ const orderSchema = new mongoose.Schema(
     
     interventionAddress: {
       adresse: { type: String, required: true },
+      fullName: { type: String, required: true },
+      email: { type: String, required: true },
       phone: { type: Number, required: true },
+      details: { type: String, required: false },
     },
     interventionDate: { type: Date },
     paymentMethod: { type: String, required: true },
@@ -36,7 +39,6 @@ const orderSchema = new mongoose.Schema(
     interventionPrice: { type: Number, required: true },
     taxPrice: { type: Number, required: true },
     totalPrice: { type: Number, required: true },
-    user: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: false },
     isPaid: { type: Boolean, default: false },
     paidAt: { type: Date },
     isDone: { type: Boolean, default: false },

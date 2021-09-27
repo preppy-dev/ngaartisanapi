@@ -1,27 +1,35 @@
 import express from 'express';
 import expressAsyncHandler from 'express-async-handler';
-import Devis from '../models/devisModel.js';
+import Order from '../models/orderGuestModel';
 import User from '../models/userModel.js';
-import {
+import Prestation from '../models/prestationModel.js';
+/* import {
   isAdmin,
   isAuth,
   isModeratorOrAdmin,
   mailgun,
   payOrderEmailTemplate,
-} from '../helpers/utils.js';
+} from '../utils.js'; */
+import { isModeratorOrAdmin, isAdmin, isAuth } from '../helpers/utils.js';
 
-const devisRouter = express.Router();
-devisRouter.get(
+const orderRouter = express.Router();
+orderRouter.get(
   '/',
   isAuth,
   isModeratorOrAdmin,
   expressAsyncHandler(async (req, res) => {
-    const devis = await Devis.find();
-    res.send(devis);
+    const seller = req.query.seller || '';
+    const sellerFilter = seller ? { seller } : {};
+
+    const orders = await Order.find({ ...sellerFilter }).populate(
+      'user',
+      'name'
+    );
+    res.send(orders);
   })
 );
 
-devisRouter.get(
+orderRouter.get(
   '/summary',
   isAuth,
   isAdmin,
@@ -53,7 +61,7 @@ devisRouter.get(
       },
       { $sort: { _id: 1 } },
     ]);
-    const productCategories = await Product.aggregate([
+    const prestationCategories = await Prestation.aggregate([
       {
         $group: {
           _id: '$category',
@@ -61,49 +69,80 @@ devisRouter.get(
         },
       },
     ]);
-    res.send({ users, orders, dailyOrders, productCategories });
+    res.send({ users, orders, dailyOrders, prestationCategories });
   })
 );
 
-
-devisRouter.post(
-  '/',
-  expressAsyncHandler(async (req, res) => {
-      const devis = new Devis({
-        category: req.body.name,
-        description: req.body.description,
-        date: req.body.date,
-        adresse: req.body.adresse,
-        contact: {
-          fullName:req.body.fullName,
-          email:req.body.email,
-          phone:req.body.phone,
-        },
-        cniRecto: req.body.cniRecto,
-        cniVerso: req.body.cniVerso,
-      });
-      const createdDevis = await devis.save();
-      res
-        .status(201)
-        .send({ message: 'New Devis Order Created', devis: createdDevis });
- 
-  })
-);
-
-devisRouter.get(
-  '/:id',
+orderRouter.get(
+  '/mine',
   isAuth,
   expressAsyncHandler(async (req, res) => {
-    const devis = await Devid.findById(req.params.id);
-    if (devis) {
-      res.send(devis);
+    const orders = await Order.find({ user: req.user._id });
+    res.send(orders);
+  })
+);
+
+orderRouter.post(
+  '/',
+  expressAsyncHandler(async (req, res) => {
+    if (req.body.orderItem.length === 0) {
+      res.status(400).send({ message: 'Cart is empty' });
     } else {
-      res.status(404).send({ message: 'Devis Not Found' });
+      const order = new Order({
+        orderItem: req.body.orderItem,
+        interventionAddress: req.body.interventionAddress,
+        interventionDate: req.body.interventionDate,
+        paymentMethod: req.body.paymentMethod,
+        itemPrice: req.body.itemPrice,
+        interventionPrice: req.body.interventionPrice,
+        taxPrice: req.body.taxPrice,
+        totalPrice: req.body.totalPrice,
+      });
+      const createdOrder = await order.save();
+      res
+        .status(201)
+        .send({ message: 'New Order Created', order: createdOrder });
     }
   })
 );
 
-devisRouter.put(
+/* 
+orderRouter.post(
+  '/',
+  expressAsyncHandler(async (req, res) => {
+   
+      const order = new Order({
+        name: req.body.name,
+        type: req.body.type,
+        qty: req.body.qty,
+        prestation:req.body.prestation,
+        category:req.body.category,
+        date: req.body.date,
+        adresse: req.body.adresse,
+        phone: req.body.phone,
+        
+      });
+      const createdOrder = await order.save();
+      res
+        .status(201)
+        .send({ message: 'New Order Created', order: createdOrder });
+  })
+);
+ */
+orderRouter.get(
+  '/:id',
+  isAuth,
+  expressAsyncHandler(async (req, res) => {
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      res.send(order);
+    } else {
+      res.status(404).send({ message: 'Order Not Found' });
+    }
+  })
+);
+
+orderRouter.put(
   '/:id/pay',
   isAuth,
   expressAsyncHandler(async (req, res) => {
@@ -145,22 +184,22 @@ devisRouter.put(
   })
 );
 
-devisRouter.delete(
+orderRouter.delete(
   '/:id',
   isAuth,
   isAdmin,
   expressAsyncHandler(async (req, res) => {
-    const devis = await Devis.findById(req.params.id);
-    if (devis) {
-      const deleteDevis = await devis.remove();
-      res.send({ message: 'devis Deleted', devis: deleteDevis });
+    const order = await Order.findById(req.params.id);
+    if (order) {
+      const deleteOrder = await order.remove();
+      res.send({ message: 'Order Deleted', order: deleteOrder });
     } else {
-      res.status(404).send({ message: 'Devis Not Found' });
+      res.status(404).send({ message: 'Order Not Found' });
     }
   })
 );
 
-devisRouter.put(
+orderRouter.put(
   '/:id/deliver',
   isAuth,
   isAdmin,
@@ -178,4 +217,4 @@ devisRouter.put(
   })
 );
 
-export default devisRouter;
+export default orderRouter;
